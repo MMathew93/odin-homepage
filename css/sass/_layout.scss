@@ -1,0 +1,45 @@
+// responsive breakpoints
+$breakpoints: (
+    "xs": 435px,
+    "sm": 575px,
+    "md": 767px,
+    "lg": 1024px,
+    "xl": 1440px,
+);
+
+// global variables for grid
+$col-margin: 5px;
+$cols-count: 12;
+
+// styling for rows and columns
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex-grow: 1;
+    max-width: 100%;
+    margin: 0 $col-margin;
+}
+
+//loop through breakpoint map and add media queries as well as columns for each breakpoint
+// containers also included
+@each $key, $value in $breakpoints {
+    .container-#{key} {
+        max-width: $value;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: $value) {
+        @for $i from 1 through $cols-count {
+            .col-#{key}-#{$i} {
+                flex-grow: 0;
+                width: calcWidth($i);
+            }
+        }
+    }
+}
+
+// function to calculate the width of the column
+@function calcwidth($n) {
+    @return calc((#{$n} / $cols-count * 100%) - 2 * #{$col-margin});
+}

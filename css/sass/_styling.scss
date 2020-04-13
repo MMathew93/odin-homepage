@@ -1,6 +1,7 @@
 //Global variables
 $font-stack: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $primary-color: #cc9543;
+$generic-text-color: #4a4a4a;
 
 //need to creat font mixin
 @font-face {
@@ -45,17 +46,35 @@ $primary-color: #cc9543;
     text-decoration: none;
     border: none;
 
-    a:hover {
+    :hover {
         opacity: 0.8;
         color: #fff;
         text-decoration: none;
     }
 }
 
+.bold {
+    font-weight: bold;
+}
+
+h1, h2,
+h3, h4 {
+    color: $generic-text-color;
+}
+
+p {
+    color: rgba(74,74,74,0.7);
+    font-size: 18px;
+    line-height: 2em;
+}
 
 //########################
 //#### NAVBAR||HEADER ####
 //########################
+header {
+    padding-bottom: 60px;
+}
+
 .navbar {
     display: flex;
     background: #ffffff;
@@ -80,7 +99,7 @@ $primary-color: #cc9543;
         display: flex;
         padding: 6px 12px;
         text-decoration: none;
-        color: #676767;
+        color: $generic-text-color;
         align-items: center;
       }
 
@@ -123,7 +142,7 @@ $primary-color: #cc9543;
 .hero {
     width: 100%;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .accent {
@@ -132,6 +151,7 @@ $primary-color: #cc9543;
 
 .secondary {
     color: #676767;
+    padding-bottom: 60px;
 }
 
 .gradient {
@@ -140,4 +160,53 @@ $primary-color: #cc9543;
 
 .button--primary {
     background-color: #6abfc3;
+}
+
+
+//########################
+//HOW IT WORKS Section
+.how-it-works{
+    padding-top: 100px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.how-it-works-title {
+    margin: 0 auto 100px;
+    max-width: 550px;
+
+    h2 {
+        padding-bottom: 40px;
+    }
+}
+
+.how-it-works-tiles {
+    display: flex;
+    justify-content: center;
+    max-width: 1040px;
+    margin: 0 auto;
+    align-items: baseline;
+
+    .tile {
+        padding: 15px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subtitle {
+        margin: 50px 0 20px
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+.tile img {
+    height: 165px;
+}
+
+.description p {
+    font-size: 19px;
 }

@@ -617,6 +617,7 @@ header {
 .curriculum {
   padding-top: 60px;
   background: #f3f3f3;
+  padding-bottom: 60px;
 }
 
 .curriculum-title {
@@ -678,6 +679,77 @@ header {
 
 .button--secondary {
   background-color: #cc9543;
+}
+
+.success {
+  padding-top: 60px;
+  background-image: linear-gradient(to bottom, #fff, #eee);
+}
+
+.success-container {
+  max-width: 1280px;
+  min-height: 400px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.success-title {
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.success-story {
+  flex-basis: 49.9%;
+  display: flex;
+  padding-bottom: 36px;
+}
+
+.photo {
+  padding-top: 16px;
+  margin: 0 20px;
+}
+
+.photo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  max-width: none !important;
+}
+
+.name a {
+  color: #cc9543;
+  text-decoration: none;
+}
+
+.name a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.success-story-read-more {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.success-story-read-more a {
+  color: #676767;
+}
+
+.success-story-read-more a:hover {
+  color: #000000;
+}
+
+.bottom-box {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.bottom-box .big {
+  font-size: 28px;
+  margin-bottom: 36px;
 }
 
 /*# sourceMappingURL=main.css.map */
